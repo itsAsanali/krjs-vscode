@@ -1,0 +1,70 @@
+{
+  "scopeName": "source.krjs",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.krjs",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.krjs",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.krjs",
+          "match": "\\b(만약|아니면만약|아니면|선택|경우|기본|반복|동안|실행|중지|계속|시도|잡기|마지막으로|던지기)\\b"
+        },
+        {
+          "name": "keyword.declaration.krjs",
+          "match": "\\b(변수|상수|함수|반환|클래스|생성자|확장|새로운|이것|비동기|기다리기|가져오기|내보내기)\\b"
+        },
+        {
+          "name": "support.function.krjs",
+          "match": "\\b(로그|오류로그|경고로그|정보로그)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.krjs",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "string.quoted.single.krjs",
+          "begin": "'",
+          "end": "'"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.krjs",
+          "match": "\\b(참|거짓|없음|정의안됨)\\b"
+        }
+      ]
+    }
+  }
+}

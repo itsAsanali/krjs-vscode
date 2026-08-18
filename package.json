@@ -1,0 +1,54 @@
+{
+  "name": "krjs",
+  "displayName": "KRJS - 자바스크립트",
+  "description": "VS Code extension for 자바스크립트 (Korean JS) language support and execution.",
+  "version": "1.0.0",
+  "publisher": "asanaliopensource",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Runners"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "krjs",
+      "aliases": ["KRJS", "Korean JS", "자바스크립트"],
+      "extensions": [".krjs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "krjs",
+      "scopeName": "source.krjs",
+      "path": "./syntaxes/krjs.tmLanguage.json"
+    }],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .krjs",
+          "command": "krjs.runFile",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "krjs.runFile",
+        "title": "Run KRJS File",
+        "icon": "$(play)"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:krjs"
+  ],
+  "main": "./extension.js",
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.37"
+  }
+}

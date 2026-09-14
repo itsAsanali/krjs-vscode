@@ -1,1 +1,7 @@
-{"name":"krjs-vscode","author":"itsAsanali","language":"javascript","license":"none","encoding":"UTF-8"}
+{
+    "name": "krjs-vscode",
+    "author": "asanaIi",
+    "language": "javascript",
+    "license": "none",
+    "encoding": "UTF-8"
+}
